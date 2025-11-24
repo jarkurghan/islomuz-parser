@@ -41,7 +41,7 @@ const main = async () => {
         })
       }
     }
-    await db.insert(prayerTimes).values(rows)
+    await db.insert(prayerTimes).values(rows).onConflictDoNothing()
   }
 }
 
